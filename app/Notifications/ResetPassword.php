@@ -15,17 +15,18 @@ class ResetPassword extends Notification
      *
      * @return void
      */
-     public $token;
+    public $token;
 
-     public function __construct($token)
-     {
-         $this->token = $token;
-     }
+    public function __construct($token)
+    {
+        $this->token = $token;
+    }
 
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed  $notifiable
+     * @param  mixed $notifiable
+     *
      * @return array
      */
     public function via($notifiable)
@@ -36,7 +37,8 @@ class ResetPassword extends Notification
     /**
      * Get the mail representation of the notification.
      *
-     * @param  mixed  $notifiable
+     * @param  mixed $notifiable
+     *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
@@ -51,7 +53,8 @@ class ResetPassword extends Notification
     /**
      * Get the array representation of the notification.
      *
-     * @param  mixed  $notifiable
+     * @param  mixed $notifiable
+     *
      * @return array
      */
     public function toArray($notifiable)
